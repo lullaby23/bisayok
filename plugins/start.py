@@ -96,9 +96,9 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     text = "<b>Hallo Sayang 👋</b> Kamu Harus Join Channel Atau Group Dulu Ya\nKalau Sudah Join Tekan Tulisan 🔒 Coba Lagi Kemudian tekan tombol Start\n"
     message_text = message.text
-    try:
+       try:
         command, argument = message_text.split()
-text = text + f"\n\n <b><a href='https://t.me/{client.username}?start={argument}'>Coba Lagi</a> 🔒</b>"
+        text = text + f" <b>tekan <a href='https://t.me/{client.username}?start={argument}'>coba lagi</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink)]])
