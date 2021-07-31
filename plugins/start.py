@@ -98,7 +98,7 @@ async def not_joined(client: Client, message: Message):
     message_text = message.text
     try:
         command, argument = message_text.split()
-text = text + f"\n\n <b>🔒 <a href='https://t.me/{client.username}?start={argument}'>Buka File</a></b>"
+text = text + f"\n\n <b>🔒 <a href='https://t.me/{client.username}?start={argument}'>Coba Lagi</a> 🔒</b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel 🔑", url = client.invitelink)]])
